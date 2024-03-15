@@ -1,9 +1,52 @@
 /* Add styling for your page here */
 
 .App {
+  display: flex;
+  padding: 3em;
+  gap: 2em;
+  .MenuContainer {
+    width: 70%;
+  }
+  .Cart {
+    width: 30%;
+  }
+}
 
+.Menu {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 1em;
 }
 
 .BakeryItem {
-  
+  /* max-width: 300px; */
+  background-color: #f2f2f2;
+  border-radius: 10px;
+  overflow: hidden;
+  img {
+    width: 100%;
+  }
+
+  .cardText {
+    padding: 1em;
+    p {
+      margin-top: auto;
+    }
+    button {
+      cursor: pointer;
+    }
+  }
+  .foodTitle {
+    font-weight: bolder;
+  }
+}
+
+.BakeryItem:hover {
+  background-color: #e6e6e6;
+}
+
+@media screen and (max-width: 770px) {
+  .Menu {
+    grid-template-columns: 1fr;
+  }
 }
